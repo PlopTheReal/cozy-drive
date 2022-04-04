@@ -128,10 +128,15 @@ export const initClient = async url => {
 }
 
 export const initBar = async client => {
-  // Prevents the bar to be initialized 2 times in a row after the onboarding
   if (document.getElementById('coz-bar')) {
-    return
+    document.getElementById('coz-bar').remove()
+    // ref.current.contentWindow.document.body.querySelector("#coz-bar")?.remove()
+    // ref.current.contentWindow.document.body.querySelector(".coz-banner-client*")?.remove()
+    // ref.current.contentWindow.document.body.querySelector(".styles__o-layout-2panes*")?.style.height = 0
+
+
   }
+  return
   await cozy.bar.init({
     appName: 'Drive',
     appNamePrefix: 'Cozy',

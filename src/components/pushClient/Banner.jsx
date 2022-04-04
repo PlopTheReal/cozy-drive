@@ -72,32 +72,33 @@ class BannerClient extends Component {
       isIOS() || isAndroid() ? 'Nav.btn-client-mobile' : 'Nav.banner-txt-client'
 
     return (
-      <div className={styles['coz-banner-client']}>
-        <Banner
-          inline
-          icon={<Icon icon={DeviceLaptopIcon} size="100%" />}
-          text={t(text)}
-          bgcolor={palette['paleGrey']}
-          buttonOne={
-            <ButtonLink
-              href={t(link)}
-              theme="text"
-              icon={DownloadIcon}
-              label={t('Nav.banner-btn-client')}
-              onClick={() => this.markAsSeen('banner')}
-            />
-          }
-          buttonTwo={
-            <Button
-              theme="text"
-              label={t('SelectionBar.close')}
-              onClick={() => {
-                this.markAsSeen('close')
-              }}
-            />
-          }
-        />
-      </div>
+      null
+      // <div className={styles['coz-banner-client']}>
+      //   <Banner
+      //     inline
+      //     icon={<Icon icon={DeviceLaptopIcon} size="100%" />}
+      //     text={t(text)}
+      //     bgcolor={palette['paleGrey']}
+      //     buttonOne={
+      //       <ButtonLink
+      //         href={t(link)}
+      //         theme="text"
+      //         icon={DownloadIcon}
+      //         label={t('Nav.banner-btn-client')}
+      //         onClick={() => this.markAsSeen('banner')}
+      //       />
+      //     }
+      //     buttonTwo={
+      //       <Button
+      //         theme="text"
+      //         label={t('SelectionBar.close')}
+      //         onClick={() => {
+      //           this.markAsSeen('close')
+      //         }}
+      //       />
+      //     }
+      //   />
+      // </div>
     )
   }
 }
